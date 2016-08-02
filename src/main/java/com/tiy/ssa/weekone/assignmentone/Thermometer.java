@@ -14,30 +14,33 @@ public class Thermometer {
 	}
 	
 	public int display(boolean userWantsFahrenheit) {
-		
-		if (userWantsFahrenheit == this.isFahrenheit) 
+	
+		if (this.isFahrenheit == userWantsFahrenheit) { 
 			return this.temperature;
-		return Math.round(((this.temperature - 32) * 5) / 9.0F);
-	}
-
-	int fahrenheitToCelsius(boolean isFahrenheit) {
-		if(isFahrenheit){
-			 return (((this.temperature * 9) / 5) + 32);
 			
-		}else {
-			return 0;
+		} else if (this.isFahrenheit == true && userWantsFahrenheit == false) { 
+			return (((Math.round(this.temperature - 32) * 5) / 9));	
+			
+		} else if (this.isFahrenheit == false && userWantsFahrenheit == true) {
+			return (((Math.round(this.temperature * 9) / 5) + 32));
+		
+		} else {
+			return this.temperature;
 		}
+		
+		
 	}
+		
 	
-	int CelsiustoFahrenheit(boolean isFahrenheit) {
-		if(isFahrenheit == false) {
-			return (((this.temperature - 32) * 5) / 9);
-		}else{
-			return 0;
-		}
+	public int fahrenheitToCelsius() {
+		return (((Math.round(this.temperature - 32) * 5) / 9));	 
 		
 	}
 	
+	public int celsiustoFahrenheit() {
+		return (((Math.round(this.temperature * 9) / 5) + 32));
+	}
 	
+
 	
 }

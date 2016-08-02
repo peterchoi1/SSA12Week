@@ -7,23 +7,25 @@ import org.junit.Test;
 public class ThermometerTest {
 
 	@Test
-	public void test() {
-		//assertEquals("", 25 ,new Thermometer(78, true).display(true));
-		//assertEquals("", 212 ,new Thermometer(78, false).display(false));
-		//assertEquals("212F -> 100C", 100 ,new Thermometer(75, true).display(false));
-		assertEquals(172, new Thermometer(78, true).fahrenheitToCelsius(true));
-		assertEquals(25, new Thermometer(78,false).CelsiustoFahrenheit(false));
-		
+	public void display() {
+		assertEquals("", 32, new Thermometer(32, true).display(true));
+		assertEquals("", 0, new Thermometer(32, true).display(false));
+		assertEquals("", 32, new Thermometer(0, false).display(true));
+		assertEquals("", 0, new Thermometer(0,false).display(false));
+		assertEquals("", -13, new Thermometer(7,true).display(false));
 	}
 	@Test
 	public void FtoC() {
-		//assertEquals("", 100, new Thermometer(212).fahrenheitToCelsius(isFahrenheit));
-		
+		assertEquals("", 0, new Thermometer(32, true).fahrenheitToCelsius());
+		assertEquals("", -9, new Thermometer(15, true).fahrenheitToCelsius());		
 	}
 	
-	public void integerDivision() {
-		assertEquals("", 1.0, 9F/5, .01);
+	@Test
+	public void CtoF(){
+		assertEquals("", 32, new Thermometer(0, false).celsiustoFahrenheit());
+		assertEquals("", 16, new Thermometer(-9, false).celsiustoFahrenheit());
 	}
+	
 	
 	
 	

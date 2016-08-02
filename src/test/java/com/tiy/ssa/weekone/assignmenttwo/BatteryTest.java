@@ -14,9 +14,9 @@ public class BatteryTest {
 
 	@Test
 	public void sanity() {
-		//assertEquals("", 0F, new Battery(150F).discharge(150F, 100F), 0);
-		//assertEquals("", 150F, new Battery(150F).charge(100000F, 100F), 0);
-		//System.err.println(new Battery(125.5F));
+		assertEquals("", 0F, new Battery(150F).discharge(150F, 100F), 0);
+		assertEquals("", 150F, new Battery(150F).charge(100000F, 100F), 0);
+		System.err.println(new Battery(125.5F));
 		assertEquals("", 1200F, new Battery(150F).howLong(5F, 100F), 0);
 		assertEquals("", 80F, new Battery(150F).howLong(75F, 100F), 0);
 	}

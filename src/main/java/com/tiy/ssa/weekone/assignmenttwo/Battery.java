@@ -12,10 +12,10 @@ public class Battery {
 		this.leftOver = capacity;
 	}
 
-	public float discharge(float minus) {
+	public float discharge(float dischargeAmount) {
 
-		if (leftOver - minus >= 0) {
-			leftOver = leftOver - minus;
+		if (leftOver - dischargeAmount >= 0) {
+			leftOver = leftOver - dischargeAmount;
 
 		} else {
 			leftOver = 0;
@@ -24,10 +24,10 @@ public class Battery {
 
 	}
 
-	public float charge(float add) {
+	public float charge(float chargeAmount) {
 
-		if (leftOver + add <= capacity) {
-			leftOver = leftOver + add;
+		if (leftOver + chargeAmount <= capacity) {
+			leftOver = leftOver + chargeAmount;
 
 		} else {
 			leftOver = capacity;

@@ -12,8 +12,10 @@ public class BatteryTest {
 		//assertEquals(100, new Battery(0).charge(10, 100), 0);
 	}
 
-	@Test
-	/* public void sanity() {
+	
+	/* 
+	 	@Test
+	 	public void sanity() {
 		assertEquals("", 0F, new Battery(150F).discharge(150F, 100F), 0);
 		
 		assertEquals("", 150F, new Battery(150F).charge(100000F, 100F), 0);
@@ -28,6 +30,7 @@ public class BatteryTest {
 		assertEquals("", 50, new Battery(50F).getRemaining(), 0);
 	}
 */
+	@Test
 	public void newTests() {
 		
 		Battery b = new Battery(150F);

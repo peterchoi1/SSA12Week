@@ -14,34 +14,34 @@ public class Battery {
 
 	public float discharge(float minus) {
 
-		if (this.leftOver - minus >= 0) {
-			this.leftOver = this.leftOver - minus;
+		if (leftOver - minus >= 0) {
+			leftOver = leftOver - minus;
 
 		} else {
-			this.leftOver = 0;
+			leftOver = 0;
 		}
-		return this.leftOver;
+		return leftOver;
 
 	}
 
 	public float charge(float add) {
 
-		if (this.leftOver + add <= this.capacity) {
-			this.leftOver = this.leftOver + add;
+		if (leftOver + add <= capacity) {
+			leftOver = leftOver + add;
 
 		} else {
-			this.leftOver = capacity;
+			leftOver = capacity;
 
 		}
 
-		return this.leftOver;
+		return leftOver;
 	}
 
 	
 	public int howLong(float power) {
 		
 		
-		float timeHour = this.leftOver / power;
+		float timeHour = leftOver / power;
 		int timeMinute = Math.round(timeHour * 60);
 		
 		return timeMinute;
@@ -52,14 +52,14 @@ public class Battery {
 	
 	public float getCapacity()
 	{
-		return this.capacity;
+		return capacity;
 	}
 	
 	
 	
 	public float getRemaining()
 	{
-		return this.leftOver;
+		return leftOver;
 	}
 	
 

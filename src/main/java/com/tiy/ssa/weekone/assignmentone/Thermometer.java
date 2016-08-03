@@ -21,12 +21,10 @@ public class Thermometer {
 		} else if (this.isFahrenheit == true && userWantsFahrenheit == false) { 
 			return (((Math.round(this.temperature - 32) * 5) / 9));	
 			
-		} else if (this.isFahrenheit == false && userWantsFahrenheit == true) {
-			return (((Math.round(this.temperature * 9) / 5) + 32));
-		
 		} else {
-			return this.temperature;
+			return (((Math.round(this.temperature * 9) / 5) + 32));
 		}
+		
 		
 		
 	}

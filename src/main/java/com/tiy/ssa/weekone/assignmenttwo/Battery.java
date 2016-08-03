@@ -41,10 +41,8 @@ public class Battery {
 	public int howLong(float power) {
 		
 		
-		float timeHour = leftOver / power;
-		int timeMinute = Math.round(timeHour * 60);
+		 return (int) ((leftOver / power) * 60);
 		
-		return timeMinute;
 		
 		
 	}

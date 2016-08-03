@@ -41,6 +41,7 @@ public class BatteryTest {
 		assertEquals(50F, b.discharge(100F), 0);
 		assertEquals(50F, b.getRemaining(), 0);
 		
+		assertEquals(2142, b.howLong(1.4F), 0);
 		
 	}
 	

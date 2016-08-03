@@ -5,7 +5,7 @@ public class PigLatin {
 	final String word;
 	final String vowels = "aeiou";
 	final String consonants = "bcdfghjklmnpqrstvwxyz";
-	      String sentence = "";
+	String sentence = "";
 	
 	
 	public PigLatin(String word) {
@@ -19,6 +19,8 @@ public class PigLatin {
 		for(int i = 0; i < parts.length; i++){
 			
 			String firstLetter = parts[i].substring(0, 1);
+			
+			if(parts[i].length() > 1){
 			String secondLetter = parts[i].substring(1, 2);
 			
 			
@@ -52,6 +54,7 @@ public class PigLatin {
 				
 				}
 				
+			}
 			}
 			
 			for(int v = 0; v < vowels.length(); v++) {

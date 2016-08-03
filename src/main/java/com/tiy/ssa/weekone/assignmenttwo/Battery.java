@@ -38,11 +38,11 @@ public class Battery {
 	}
 
 	
-	public float howLong(float power, float leftOver) {
+	public int howLong(float power, float leftOver) {
 		
 		
 		float timeHour = leftOver / power;
-		float timeMinute = timeHour * 60;
+		int timeMinute = Math.round(timeHour * 60);
 		
 		return timeMinute;
 		
@@ -50,6 +50,17 @@ public class Battery {
 	}
 	
 	
+	public float getCapacity()
+	{
+		return this.capacity;
+	}
+	
+	
+	
+	public float getRemaining()
+	{
+		return this.leftOver;
+	}
 	
 
 	

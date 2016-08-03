@@ -17,8 +17,10 @@ public class BatteryTest {
 		assertEquals("", 0F, new Battery(150F).discharge(150F, 100F), 0);
 		assertEquals("", 150F, new Battery(150F).charge(100000F, 100F), 0);
 		System.err.println(new Battery(125.5F));
-		assertEquals("", 1200F, new Battery(150F).howLong(5F, 100F), 0);
+		assertEquals("", 1200, new Battery(150F).howLong(5F, 100F), 0);
 		assertEquals("", 80F, new Battery(150F).howLong(75F, 100F), 0);
+		assertEquals("", 100, new Battery(100F).getCapacity(), 0);
+		assertEquals("", 50, new Battery(50F).getRemaining(), 0);
 	}
 	
 }

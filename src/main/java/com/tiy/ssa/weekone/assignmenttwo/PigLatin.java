@@ -5,7 +5,7 @@ public class PigLatin {
 	final String word;
 	final String vowels = "aeiou";
 	final String consonants = "bcdfghjklmnpqrstvwxyz";
-	String sentence = "";
+	
 	
 	
 	public PigLatin(String word) {
@@ -13,6 +13,8 @@ public class PigLatin {
 	}
 	
 	public String translateToPigLatin() {
+		
+		String sentence = "";
 		
 		String[] parts = word.split(" ");
 		

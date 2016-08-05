@@ -1,17 +1,44 @@
 package com.tiy.ssa.weekone.assignmentfour;
 
+import java.util.ArrayList;
+
 public class Knight {
-		
-	final int startingX;
-	final int startingY;
-	int currentX;
-	int currentY;
 	
-	public Knight(int startingX, int startingY) {
-		this.startingX = startingX;
-		this.startingY = startingY;
+	final Location home;
+	Location current;
+	ArrayList<Location> log = new ArrayList<Location>();
+	
+	
+	public Knight(Location start) {
+		this.current = this.home = start;
 	}
 	
+	
+	public boolean isHome(){
+		return this.current.equals(this.home);
+	}
+	
+	public Location move(){
+		this.current = this.current.offset(1, 2);
+		log.add(this.current);
+		return this.current;
+	}
+	
+	public Location goHome() {
+		this.current = this.current.offset(1, -2);
+		log.add(this.current);
+		this.current = this.current.offset(-1, -2);
+		log.add(this.current);
+		this.current = this.current.offset(-1, 2);
+		log.add(this.current);
+		
+		return this.current;
+	}
+
+}	
+	
+	
+	/*
 	
 	
 	public void move() {
@@ -211,7 +238,7 @@ public class Knight {
 		
 }
 	
-	
+	*/
 	
 	
 	

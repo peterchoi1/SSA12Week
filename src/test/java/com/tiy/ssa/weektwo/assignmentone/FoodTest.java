@@ -51,12 +51,12 @@ public class FoodTest {
         List<Food> onlyCookies = new ArrayList<>();
 
         for (int i = 0; i < food.size(); i++) {
-            if (this.food.get(i).getType() == COOKIE) {
+            if (this.food.get(i).getType().equals(COOKIE)) {
                 onlyCookies.add(this.food.get(i));
             }
         }
         for (int z = 0; z < onlyCookies.size(); z++) {
-            assertTrue("", onlyCookies.get(z).getType() == COOKIE);
+            assertTrue("", onlyCookies.get(z).getType().equals(COOKIE));
         }
     }
 
@@ -64,7 +64,7 @@ public class FoodTest {
     public void noUTZBrand() {
         for (Iterator<Food> iterator = food.iterator(); iterator.hasNext();) {
             Food food2 = (Food) iterator.next();
-            if(food2.getBrand() == UTZ) {
+            if(food2.getBrand().equals(UTZ)) {
                 iterator.remove();
             }
             

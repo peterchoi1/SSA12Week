@@ -39,9 +39,5 @@ public class Location {
 	{
 		return new Location(this.x + x, this.y + y);
 	}
-	
-	
-	
-	
-	
+
 }
